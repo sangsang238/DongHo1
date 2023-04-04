@@ -57,7 +57,7 @@ public class DanhSachSanPham extends AppCompatActivity {
         context=this;
         AnhXa();
         AddItem();
-
+        System.out.println("day là 1 cái mới trê branch longbao nè nha");
 
         // Brand Start---------------------------------------------------------------
         LayoutInflater inflater = LayoutInflater.from(this);
