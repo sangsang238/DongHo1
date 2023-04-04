@@ -90,7 +90,6 @@ public class DanhSachSanPham extends AppCompatActivity {
                         CardView cardslConLai = (CardView) views.get(i).findViewById(R.id.card_slcl_dssp);
                         cardBrand.setCardBackgroundColor(Color.parseColor("#404040"));
                         cardslConLai.setCardBackgroundColor(Color.parseColor("#8F8F8F"));
-                        System.out.println("dong nay se xoia");
                     }
                     Toast.makeText(context, " "+position, Toast.LENGTH_SHORT).show();
                     cardBrand.setCardBackgroundColor(Color.parseColor("#616161"));
