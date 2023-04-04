@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="#313131">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:translationZ="2dp"
+                    android:layout_marginRight="-330dp"
+                    android:layout_marginTop="-280dp"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_hang_chu_ngang"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:rotation="-90"
+                        android:text="ROLEX"
+                        android:textColor="#313131"
+                        android:textSize="90sp"
+                        android:textStyle="bold"></TextView>
+
+
+                </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="600dp"
+                android:layout_height="500dp"
+                android:layout_marginTop="-50dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginLeft="100dp"
+                app:cardBackgroundColor="#404040"
+                app:cardCornerRadius="30dp"
+                android:orientation="vertical"
+                app:cardElevation="1dp">
+            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:src="@drawable/rolex_watch"
+                android:layout_width="363dp"
+                android:layout_height="363dp"
+                android:elevation="2dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginStart="70dp"/>
+
+
+        </FrameLayout>
+
+    <!--Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnNotice"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0"
+            app:cardBackgroundColor="#313131">
+            <ImageView
+                android:id="@+id/chuong_iv"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_logo"
+                android:layout_gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_background"
+            android:layout_gravity="center"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnShopingCart"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0"
+            app:cardBackgroundColor="#404040"
+            android:layout_marginRight="10dp">
+            <ImageButton
+                android:id="@+id/btnUser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0"
+                android:background="@drawable/ic_shoping_cart"
+                android:contentDescription="shopingcart" />
+            <TextView
+                android:id="@+id/notification_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:gravity="center_horizontal"
+                android:text="n"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:background="@drawable/yellow_dot" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <!--End: header -->
+<LinearLayout
+    android:id="@+id/chitiet"
+    android:layout_width="250dp"
+    android:layout_height="380dp"
+    android:layout_below="@+id/header"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginLeft="25dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BRAND"
+        android:textColor="#C09E57"
+
+
+        />
+    <TextView
+        android:id="@+id/tv_hang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rolex"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="23sp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PRODUCT LINE"
+        android:textColor="#C09E57"
+
+        android:layout_marginTop="20dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Datejust"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="23sp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TYPE"
+        android:textColor="#C09E57"
+
+        android:layout_marginTop="20dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Automatic"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="23sp"
+
+        />
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/chitiet"
+android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="25dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="DATEJUST 36"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:gravity="bottom"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_marginRight="25dp"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="PRICE"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:layout_weight="1"
+                android:gravity="end|bottom"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gia"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/name"
+        android:orientation="horizontal"
+        android:layout_marginRight="25dp"
+        >
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="$36000"
+            android:textColor="#C09E57"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:layout_weight="1"
+            android:gravity="end"/>
+        </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollMoTa"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/gia"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="qkkdmedmemdwemdewmdkewmdkwemdkmwedkmewkdmwe
+dmkwemdkwemdkwmedmwekmdkew
+mưdmkwemdkwmedkmwd
+mdkwemdkwemdwmedkmwedmkwmde
+mdkwemdkwemdkmwedmwkemdmwekd
+mdkwemdwkmdkwmedkew
+ẻgretnkrngnrktntr
+ekrjtnekrjtnekte"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            />
+
+
+
+    </ScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@+id/scrollMoTa"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardCornerRadius="50dp"
+            android:layout_margin="25dp"
+            app:cardBackgroundColor="#C09E57">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="ADD TO CART"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="#313131"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+
+
+
