@@ -5,29 +5,32 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <FrameLayout
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardview_item_dssp"
+            android:id="@+id/cardview_item_trangchu"
             app:cardCornerRadius="10dp"
             app:cardBackgroundColor="#404040"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginTop="25dp">
+            android:layout_marginTop="25dp"
+            android:foreground="?android:attr/selectableItemBackground">
 
             <TextView
-                android:id="@+id/txt_item_dssp"
+                android:id="@+id/txt_item_trangchu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="27dp"
                 android:text="Patek Phillipins"
                 android:textColor="@color/white"
-                android:textSize="13sp"
-                android:layout_gravity="center_horizontal"/>
+                android:textSize="14sp"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"/>
             <ImageView
-                android:id="@+id/choose_item_dssp"
+                android:id="@+id/choose_item_trangchu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/rectangle_bar"
@@ -36,7 +39,7 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:id="@+id/ic_item_dssp"
+            android:id="@+id/ic_item_trangchu"
             android:src="@drawable/ic_patek2"
             android:layout_width="50dp"
             android:layout_height="50dp"

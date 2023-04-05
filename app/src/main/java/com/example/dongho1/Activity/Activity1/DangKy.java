@@ -40,7 +40,7 @@ public class DangKy extends AppCompatActivity {
         txtSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), DangKy.class);
+                Intent intent = new Intent(v.getContext(), DangNhap.class);
                 v.getContext().startActivity(intent);
                 Toast.makeText(DangKy.this, "dang nhap", Toast.LENGTH_SHORT).show();
             }

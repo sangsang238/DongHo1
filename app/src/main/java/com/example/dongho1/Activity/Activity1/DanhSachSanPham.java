@@ -1,6 +1,7 @@
 package com.example.dongho1.Activity.Activity1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
@@ -19,7 +20,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.dongho1.Activity.AdapterCustom.BrandDsspAdapter;
+//import com.example.dongho1.Activity.AdapterCustom.BrandDsspAdapter;
 import com.example.dongho1.Activity.AdapterCustom.LineDsspAdapter;
 import com.example.dongho1.Activity.AdapterCustom.WatchDsspAdapter;
 import com.example.dongho1.Activity.Object.ObjectBrandDssp;
@@ -34,11 +35,10 @@ public class DanhSachSanPham extends AppCompatActivity {
     ImageButton nutSearch;
     Context context;
     ListView listviewLine_DSSP, listviewWatch_DSSP;
-    HorizontalScrollView horizontalscrollviewBrand_DSSP;
+    //HorizontalScrollView horizontalscrollviewBrand_DSSP;
 
     public static ArrayList<ObjectBrandDssp> arrBrandDSSP;
     ObjectBrandDssp objectBrandDssp;
-    BrandDsspAdapter brandDsspAdapter;
     LinearLayout llBrand;
 
     public static ArrayList<ObjectLineDssp> arrLineDSSP;
@@ -59,6 +59,14 @@ public class DanhSachSanPham extends AppCompatActivity {
         AddItem();
         System.out.println("sangsang238");
 
+        nutTroVe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), TrangChu.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+
         // Brand Start---------------------------------------------------------------
         LayoutInflater inflater = LayoutInflater.from(this);
         ArrayList<View> views = new ArrayList<>();
@@ -71,7 +79,7 @@ public class DanhSachSanPham extends AppCompatActivity {
             TextView slconlai = (TextView) views.get(i).findViewById(R.id.slConLai_brand_dssp);
             CardView cardBrand = (CardView) views.get(i).findViewById(R.id.card_brand_dssp);
             CardView cardslConLai = (CardView) views.get(i).findViewById(R.id.card_slcl_dssp);
-
+            // Add items
             imgBrand.setImageResource(arrBrandDSSP.get(i).getImgBrand());
             slconlai.setText(String.valueOf(arrBrandDSSP.get(i).getSlconlai()));
             cardBrand.setCardBackgroundColor(Color.parseColor("#404040"));
@@ -91,7 +99,7 @@ public class DanhSachSanPham extends AppCompatActivity {
                         cardBrand.setCardBackgroundColor(Color.parseColor("#404040"));
                         cardslConLai.setCardBackgroundColor(Color.parseColor("#8F8F8F"));
                     }
-                    Toast.makeText(context, " "+position, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, " "+slconlai.getText(), Toast.LENGTH_SHORT).show();
                     cardBrand.setCardBackgroundColor(Color.parseColor("#616161"));
                     cardslConLai.setCardBackgroundColor(Color.parseColor("#C09E57"));
                     // thêm code này nọ ở đây.
@@ -103,7 +111,7 @@ public class DanhSachSanPham extends AppCompatActivity {
 
 
 
-
+        // Line Start---------------------------------------------------------------
         lineDsspAdapter = new LineDsspAdapter(this,R.layout.item_listview_line_dssp,arrLineDSSP);
         listviewLine_DSSP.setAdapter(lineDsspAdapter);
         arrLineDSSP.get(0).setImgBar(R.drawable.rectangle_bar);
@@ -119,7 +127,9 @@ public class DanhSachSanPham extends AppCompatActivity {
                 Toast.makeText(DanhSachSanPham.this, "Item: "+DanhSachSanPham.arrLineDSSP.get(position).getId(), Toast.LENGTH_SHORT).show();
             }
         });
+        // Line End---------------------------------------------------------------
 
+        // Watch Start---------------------------------------------------------------
         watchDsspAdapter = new WatchDsspAdapter(this,R.layout.item_listview_watch_dssp,arrWatchDSSP);
         listviewWatch_DSSP.setAdapter(watchDsspAdapter);
         listviewWatch_DSSP.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -128,6 +138,7 @@ public class DanhSachSanPham extends AppCompatActivity {
                 Toast.makeText(DanhSachSanPham.this, "Item: "+DanhSachSanPham.arrWatchDSSP.get(position).getWatchName(), Toast.LENGTH_SHORT).show();
             }
         });
+        // Watch End---------------------------------------------------------------
     }
 
 
@@ -141,7 +152,7 @@ public class DanhSachSanPham extends AppCompatActivity {
         listviewWatch_DSSP = (ListView) findViewById(R.id.listviewWatch_DSSP);
 
         arrBrandDSSP = new ArrayList<>();
-        horizontalscrollviewBrand_DSSP = (HorizontalScrollView) findViewById(R.id.horizontal_scroll_DSSP);
+        //horizontalscrollviewBrand_DSSP = (HorizontalScrollView) findViewById(R.id.horizontal_scroll_DSSP);
         llBrand = (LinearLayout) findViewById(R.id.llBrand_DSSP);
 
     }
