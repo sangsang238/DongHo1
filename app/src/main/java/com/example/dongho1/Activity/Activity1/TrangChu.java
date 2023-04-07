@@ -25,7 +25,7 @@ import com.example.dongho1.R;
 import java.util.ArrayList;
 
 public class TrangChu extends AppCompatActivity {
-    CardView cardBanner;
+    CardView cardBanner, nutCart;
     TextView txtseemore;
     public static String tokenUser="";
     Context context;
@@ -46,6 +46,17 @@ public class TrangChu extends AppCompatActivity {
         context=this;
         AnhXa();
         AddItem();
+
+        // Header Start---------------------------------------------------------------
+        nutCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), GioHang.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+        // Header End---------------------------------------------------------------
+
         cardBanner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,6 +150,7 @@ public class TrangChu extends AppCompatActivity {
     }
 
     private void AnhXa() {
+        nutCart = (CardView) findViewById(R.id.btnCart);
         cardBanner = (CardView) findViewById(R.id.CardviewBanner_trangchu);
         txtseemore = (TextView) findViewById(R.id.txtSeemore_trangchu);
         arrBrandTrangchu = new ArrayList<>();

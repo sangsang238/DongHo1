@@ -17,14 +17,15 @@
         android:layout_marginTop="20dp">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnNotice"
+            android:id="@+id/btnTrangChu"
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="20dp"
             android:layout_weight="0"
-            app:cardBackgroundColor="#313131">
+            app:cardBackgroundColor="#313131"
+            android:foreground="?android:attr/selectableItemBackground">
             <ImageView
                 android:id="@+id/chuong_iv"
                 android:layout_width="50dp"
@@ -42,29 +43,29 @@
 
         <ImageButton
             android:id="@+id/btnSettingTrangThai"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="16dp"
+            android:background="@drawable/ic_setting"
+            android:foreground="?android:attr/selectableItemBackground"
             android:text=""
             android:textColorHint="@color/white"
             android:visibility="visible"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:background="@drawable/ic_setting">
-        </ImageButton>
+            tools:ignore="SpeakableTextPresentCheck"></ImageButton>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnShopingCart"
+            android:id="@+id/btnCart"
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginEnd="10dp"
             android:layout_weight="0"
             app:cardBackgroundColor="#313131"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="10dp"
+            android:foreground="?android:attr/selectableItemBackground">
             <ImageView
-                android:id="@+id/btnCartTrangChu"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -105,7 +106,8 @@
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
-            app:cardBackgroundColor="#313131">
+            app:cardBackgroundColor="#313131"
+            android:foreground="?android:attr/selectableItemBackground">
             <ImageView
                 android:id="@+id/imgTurnBack"
                 android:layout_width="40dp"
@@ -141,10 +143,11 @@
     <ListView
         android:id="@+id/listviewTrangThaiDonHang"
         android:layout_width="match_parent"
-        android:layout_height="470dp"
+        android:layout_height="480dp"
         android:layout_margin="15dp"
         android:divider="#00FFFFFF"
         android:dividerHeight="5dp"
-        android:drawSelectorOnTop="true" />
+        android:drawSelectorOnTop="true"
+        />
 
 </LinearLayout>

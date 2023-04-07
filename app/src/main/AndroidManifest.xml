@@ -15,7 +15,10 @@
         <activity
             android:name=".Activity.Activity1.TrangThaiDonHang"
             android:exported="true" >
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Activity.Activity1.GioHang"
@@ -48,10 +51,7 @@
         <activity
             android:name=".Activity.Activity1.TrangChu"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
     </application>
 

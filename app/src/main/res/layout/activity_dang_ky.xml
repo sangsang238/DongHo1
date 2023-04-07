@@ -153,22 +153,25 @@ android:orientation="vertical">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Already have an account?"
                 android:textSize="20sp"
-                android:textColor="#706F6F"
-                android:layout_marginLeft="20dp"/>
+                android:textColor="#706F6F" />
             <TextView
                 android:id="@+id/signin_dangky"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text=" Sign in."
+                android:textStyle="bold"
                 android:textSize="20sp"
                 android:textColor="#C09E57"
                 android:onClick="onClick"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"/>
         </LinearLayout>
     </LinearLayout>
@@ -182,7 +185,9 @@ android:orientation="vertical">
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:cardBackgroundColor="#C09E57"
-            app:cardCornerRadius="1000dp">
+            app:cardCornerRadius="1000dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
 
             <TextView
                 android:layout_width="match_parent"

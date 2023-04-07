@@ -14,13 +14,13 @@
         android:layout_marginTop="20dp">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnTurnBack"
+            android:id="@+id/btnTurnBack_giohang"
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
-            app:cardBackgroundColor="#313131">
+            app:cardBackgroundColor="#313131"
+            android:foreground="?android:attr/selectableItemBackground">
             <ImageView
-                android:id="@+id/imgTurnBack"
                 android:layout_width="40dp"
                 android:layout_height="20dp"
                 android:background="@drawable/ic_turnback"
@@ -124,11 +124,13 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/btnCheckout_giohang"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:cardCornerRadius="50dp"
         android:layout_margin="25dp"
-        app:cardBackgroundColor="#C09E57">
+        app:cardBackgroundColor="#C09E57"
+        android:foreground="?android:attr/selectableItemBackground">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

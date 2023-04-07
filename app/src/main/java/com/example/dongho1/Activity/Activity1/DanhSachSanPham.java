@@ -62,7 +62,15 @@ public class DanhSachSanPham extends AppCompatActivity {
         nutTroVe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), TrangChu.class);
+//                Intent intent = new Intent(v.getContext(), TrangChu.class);
+//                v.getContext().startActivity(intent);
+                finish();
+            }
+        });
+        nutGioHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), GioHang.class);
                 v.getContext().startActivity(intent);
             }
         });
@@ -134,8 +142,10 @@ public class DanhSachSanPham extends AppCompatActivity {
         listviewWatch_DSSP.setAdapter(watchDsspAdapter);
         listviewWatch_DSSP.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 Toast.makeText(DanhSachSanPham.this, "Item: "+DanhSachSanPham.arrWatchDSSP.get(position).getWatchName(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), ChiTiet.class);
+                v.getContext().startActivity(intent);
             }
         });
         // Watch End---------------------------------------------------------------
