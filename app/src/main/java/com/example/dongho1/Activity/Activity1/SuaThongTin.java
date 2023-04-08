@@ -23,8 +23,7 @@ public class SuaThongTin extends AppCompatActivity {
         nutTroVe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), TrangThaiDonHang.class);
-                v.getContext().startActivity(intent);
+                finish();
             }
         });
         nutTrangChu.setOnClickListener(new View.OnClickListener() {

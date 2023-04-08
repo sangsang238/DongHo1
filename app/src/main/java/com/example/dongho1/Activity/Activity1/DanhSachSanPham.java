@@ -59,11 +59,10 @@ public class DanhSachSanPham extends AppCompatActivity {
         AddItem();
         System.out.println("sangsang238");
 
+        // Header Start---------------------------------------------------------------
         nutTroVe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(v.getContext(), TrangChu.class);
-//                v.getContext().startActivity(intent);
                 finish();
             }
         });
@@ -74,6 +73,7 @@ public class DanhSachSanPham extends AppCompatActivity {
                 v.getContext().startActivity(intent);
             }
         });
+        // Header End---------------------------------------------------------------
 
         // Brand Start---------------------------------------------------------------
         LayoutInflater inflater = LayoutInflater.from(this);
@@ -155,7 +155,7 @@ public class DanhSachSanPham extends AppCompatActivity {
     private void AnhXa() {
         nutTroVe = (CardView) findViewById(R.id.btnTurnBackDSSP);
         nutSearch = (ImageButton) findViewById(R.id.searchbtnDSSP);
-        nutGioHang = (CardView) findViewById(R.id.btnShopingCart);
+        nutGioHang = (CardView) findViewById(R.id.btnCart);
         arrLineDSSP = new ArrayList<>();
         listviewLine_DSSP = (ListView) findViewById(R.id.listviewLine_DSSP);
         arrWatchDSSP = new ArrayList<>();

@@ -24,7 +24,7 @@ import retrofit2.Response;
 
 public class DangNhap extends AppCompatActivity {
 
-    CardView nutNext;
+    CardView nutTrangChu,nutNext;
     EditText phone, password;
     TextView txtSignup;
     public static String tokenUser="";
@@ -33,22 +33,34 @@ public class DangNhap extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_nhap);
-
         AnhXa();
         AddItem();
 
+        nutTrangChu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), TrangChu.class);
+                v.getContext().startActivity(intent);
+            }
+        });
+
+        txtSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), DangKy.class);
+                v.getContext().startActivity(intent);
+                Toast.makeText(DangNhap.this, "dang ky", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         ApiService apiService = RetrofitService.getRetrofit().create(ApiService.class);
         //nhập edt
         //SignInRequest signInRequest = new SignInRequest("0832131103", "sang123456");
-
-
         // bấm nút
         nutNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SignInRequest signInRequest = new SignInRequest(phone.getText().toString(), password.getText().toString());
-
                 Call<SignInResponse> signInCall = apiService.signIn(signInRequest);
                 // gài đk
                 signInCall.enqueue(new Callback<SignInResponse>() {
@@ -58,7 +70,7 @@ public class DangNhap extends AppCompatActivity {
                             SignInResponse signInResponse= response.body();
                             Intent intent = new Intent(v.getContext(), TrangChu.class);
                             v.getContext().startActivity(intent);
-                            Toast.makeText(DangNhap.this, "thanh cong "+signInResponse.getCustomer().getName(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DangNhap.this, "Xin chào "+signInResponse.getCustomer().getName(), Toast.LENGTH_SHORT).show();
                             tokenUser = signInResponse.getToken();
                             Call<ResponseBody> getallCall = apiService.getAllCus(tokenUser);
                             getallCall.enqueue(new Callback<ResponseBody>() {
@@ -75,7 +87,7 @@ public class DangNhap extends AppCompatActivity {
                             });
 
                         } else {
-                            Toast.makeText(DangNhap.this, "sai tk hoặc mk", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DangNhap.this, "Tài khoản hoặc mật khẩu sai.", Toast.LENGTH_SHORT).show();
 
                             // handle error
                         }
@@ -87,22 +99,11 @@ public class DangNhap extends AppCompatActivity {
                     }
                 });
             }
-
-
         });
-
-        txtSignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), DangKy.class);
-                v.getContext().startActivity(intent);
-                Toast.makeText(DangNhap.this, "dang ky", Toast.LENGTH_SHORT).show();
-            }
-        });
-
     }
 
     private void AnhXa() {
+        nutTrangChu = (CardView) findViewById(R.id.btnTrangChu);
         nutNext = (CardView) findViewById(R.id.btnNext_dangnhap);
         txtSignup = (TextView) findViewById(R.id.signup_dangnhap);
         phone = (EditText) findViewById(R.id.phone_dangnhap);

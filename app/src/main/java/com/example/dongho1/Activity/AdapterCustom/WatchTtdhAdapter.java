@@ -70,7 +70,7 @@ public class WatchTtdhAdapter extends BaseAdapter {
         imageView.setImageResource(objectWatchTtdh.getImgWatch());
         name.setText(objectWatchTtdh.getWatchName());
         price.setText('$'+String.valueOf(objectWatchTtdh.getPrice()));
-        trangthai.setText(String.valueOf(objectWatchTtdh.getTxtTrangThai()));
+        trangthai.setText(objectWatchTtdh.getTxtTrangThai());
         cardviewCancel.setTag(position);
 
 //          Có 4 trạng thái:
@@ -113,7 +113,8 @@ public class WatchTtdhAdapter extends BaseAdapter {
                                 cardviewCancel.setCardBackgroundColor(Color.parseColor("#313131"));
 
                                 listTtdh.get(currentPos).setTxtTrangThai("Aborted");
-                                trangthai.setText("Aborted");
+                                notifyDataSetChanged();
+                                //trangthai.setText("Aborted");
                             }
                              else {
                                 cardviewCancel.setCardBackgroundColor(Color.parseColor("#A63535"));
@@ -128,7 +129,6 @@ public class WatchTtdhAdapter extends BaseAdapter {
 
                 if(listTtdh.get(currentPos).getTxtTrangThai().equals("Waiting For Progressing"))
                     thongbao.show();
-
             }
         });
 

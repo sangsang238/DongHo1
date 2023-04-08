@@ -23,7 +23,7 @@ import retrofit2.Response;
 
 public class DangKy extends AppCompatActivity {
 
-    CardView nutNext;
+    CardView nutTrangChu,nutNext;
     EditText email, password, name, phone, address;
     TextView txtSignin;
     public static String tokenUser="";
@@ -36,6 +36,13 @@ public class DangKy extends AppCompatActivity {
         AddItem();
         ApiService apiService = RetrofitService.getRetrofit().create(ApiService.class);
 
+        nutTrangChu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), TrangChu.class);
+                v.getContext().startActivity(intent);
+            }
+        });
 
         txtSignin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +102,7 @@ public class DangKy extends AppCompatActivity {
 
 
     private void AnhXa() {
+        nutTrangChu = (CardView) findViewById(R.id.btnTrangChu);
         nutNext = (CardView) findViewById(R.id.btnNext_dangky);
         txtSignin = (TextView) findViewById(R.id.signin_dangky);
         email = (EditText) findViewById(R.id.email_dangky);

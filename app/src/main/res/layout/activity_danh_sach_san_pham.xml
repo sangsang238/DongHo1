@@ -58,7 +58,7 @@
         </ImageButton>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnShopingCart"
+            android:id="@+id/btnCart"
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -67,8 +67,7 @@
             app:cardBackgroundColor="#313131"
             android:layout_marginRight="10dp"
             android:foreground="?android:attr/selectableItemBackground">
-            <ImageButton
-                android:id="@+id/btnCart"
+            <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
